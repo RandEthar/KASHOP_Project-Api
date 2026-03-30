@@ -29,11 +29,15 @@ namespace KASHOP.BLL.Service
 
         }
 
+
         public async Task<List<CategoryResponse>> GetAllCategories()
         {
-          var categories = await _categoryRepository.GetAllAsync(new string[] {nameof(Category.Translations)});
+          var categories = await _categoryRepository.
+                GetAllAsync(new string[] {nameof(Category.Translations),
+          nameof(Category.CreatedBy)});
 
             return categories.Adapt<List<CategoryResponse>>();
+
         }
 
         public async Task<CategoryResponse> GetCategory(Expression<Func<Category, bool>> filter)
@@ -42,6 +46,15 @@ namespace KASHOP.BLL.Service
                nameof(Category.Translations),
            });
             return  category.Adapt<CategoryResponse>();  
+        }
+
+        public async Task<bool> DeleteCategory(int Id)
+        {
+
+         var category=await _categoryRepository.GetOne(c=>c.Id==Id);
+            if (category == null)
+                return false;
+            return await _categoryRepository.DeleteAsync(category);
         }
     }
 }

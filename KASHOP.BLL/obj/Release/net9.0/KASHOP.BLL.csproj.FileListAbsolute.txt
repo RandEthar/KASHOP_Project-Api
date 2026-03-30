@@ -1,0 +1,16 @@
+E:\API\KASHOP\KASHOP.BLL\bin\Release\net9.0\KASHOP.BLL.deps.json
+E:\API\KASHOP\KASHOP.BLL\bin\Release\net9.0\KASHOP.BLL.dll
+E:\API\KASHOP\KASHOP.BLL\bin\Release\net9.0\KASHOP.BLL.pdb
+E:\API\KASHOP\KASHOP.BLL\bin\Release\net9.0\KASHOP.DAL.dll
+E:\API\KASHOP\KASHOP.BLL\bin\Release\net9.0\KASHOP.DAL.pdb
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.csproj.AssemblyReference.cache
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.AssemblyInfoInputs.cache
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.AssemblyInfo.cs
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.csproj.CoreCompileInputs.cache
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.sourcelink.json
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.csproj.Up2Date
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.dll
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\refint\KASHOP.BLL.dll
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\KASHOP.BLL.pdb
+E:\API\KASHOP\KASHOP.BLL\obj\Release\net9.0\ref\KASHOP.BLL.dll
