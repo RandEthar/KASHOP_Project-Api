@@ -25,18 +25,23 @@ namespace KASHOP.DAL.Repository
 
         public async Task<bool> DeleteAsync(T entity)
         {
-           _context.Remove(entity);
+            _context.Remove(entity);
             //بترجع عدد الصفوف يلي تاثروا يعني اذا صار حذف او لا
-         var affected=await _context.SaveChangesAsync();
-            return affected>0;
+            var affected = await _context.SaveChangesAsync();
+            return affected > 0;
 
         }
 
-        public async Task<List<T>> GetAllAsync(string[]? includes = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter=null, 
+            string[]? includes = null)
 
         {
             // select * from T هاي الجمله معناها ما ترجع البيانات اصبر بدي اكمل عليهم 
             IQueryable<T> query = _context.Set<T>();
+            if (filter != null)
+            {
+                query=query.Where(filter);
+            }
             if (includes != null)
             {
                 for (int i = 0; i < includes.Length; i++)
@@ -61,8 +66,16 @@ namespace KASHOP.DAL.Repository
             }
             return await query.FirstOrDefaultAsync(filter);
         }
-    
-    }
+
+        public async Task<bool> UpdateAsync(T entity)
+        {
+            _context.Update(entity);
+            var affected = await _context.SaveChangesAsync();
+            return affected > 0;
+
         }
+
+    }
+}
 
 

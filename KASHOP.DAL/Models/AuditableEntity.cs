@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace KASHOP.DAL.Models
 {
+    public enum EntityStatus
+    {
+      Active = 1,
+      Inactive = 2,
+    }
+
     public class AuditableEntity
     {
         public String CreatedById { get; set; }
@@ -14,5 +20,6 @@ namespace KASHOP.DAL.Models
         public DateTime? UpdatedOn { get; set; }
         public ApplicationUser CreatedBy { get; set; }
         public ApplicationUser? UpdatedBy { get; set; }
+            public EntityStatus State { get; set; }= EntityStatus.Active;
     }
 }

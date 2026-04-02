@@ -43,7 +43,7 @@ namespace KASHOP.BLL.Service
 
         public async Task<List<BrandResponse>> GetAllBrands()
         {
-            var brands = await _brandRepository.GetAllAsync(new[]
+            var brands = await _brandRepository.GetAllAsync(b=> b.State == EntityStatus.Active, new[]
             {
         nameof(Brand.CreatedBy),
         nameof(Brand.Translations)
