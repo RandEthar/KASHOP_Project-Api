@@ -5,7 +5,7 @@
 namespace KASHOP.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class addEntityStatus : Migration
+    public partial class productModule : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
